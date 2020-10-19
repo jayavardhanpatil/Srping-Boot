@@ -2,6 +2,9 @@ package com.example.springboot.controllers;
 
 import com.example.springboot.services.GreetingService;
 import com.example.springboot.services.GreetingServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
 /**
  * Created by IntelliJ IDEA.
@@ -10,8 +13,10 @@ import com.example.springboot.services.GreetingServiceImpl;
  * Time:  14:23
  */
 
+@Controller
 public class PropertyInjectionController {
 
+    @Autowired
     public GreetingService greetingService;
 
     public String getGreeting(){

@@ -1,5 +1,7 @@
 package com.example.springboot.services;
 
+import org.springframework.stereotype.Service;
+
 /**
  * Created by IntelliJ IDEA.
  * User: jayavardhanpatil
@@ -7,6 +9,7 @@ package com.example.springboot.services;
  * Time:  14:22
  */
 
+@Service
 public class GreetingServiceImpl implements GreetingService {
     @Override
     public String greeting() {

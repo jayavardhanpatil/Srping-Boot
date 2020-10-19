@@ -1,6 +1,7 @@
 package com.example.springboot.controllers;
 
 import com.example.springboot.services.GreetingService;
+import org.springframework.stereotype.Controller;
 
 /**
  * Created by IntelliJ IDEA.
@@ -9,6 +10,7 @@ import com.example.springboot.services.GreetingService;
  * Time:  14:33
  */
 
+@Controller
 public class ConstructorInjectionController {
 
     private final GreetingService greetingService;
