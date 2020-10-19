@@ -22,6 +22,7 @@ public class SpringbootApplication {
 		String greeting = controller.helloWorld();
 		System.out.println(greeting);
 
+		//DI
 		System.out.println("------ Property");
 		PropertyInjectionController propertyInjectedController = (PropertyInjectionController) context.getBean("propertyInjectionController");
 		System.out.println(propertyInjectedController.getGreeting());

@@ -1,10 +1,8 @@
 package com.example.springboot.controllers;
 
-import com.example.springboot.services.GreetingServiceImpl;
+import com.example.springboot.services.SetterGreetingServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ConstructorInjectionControllerTest {
 
@@ -12,7 +10,7 @@ class ConstructorInjectionControllerTest {
 
     @BeforeEach
     void setUp() {
-        controller = new ConstructorInjectionController(new GreetingServiceImpl());
+        controller = new ConstructorInjectionController(new SetterGreetingServiceImpl());
     }
 
     @Test

@@ -1,10 +1,8 @@
 package com.example.springboot.controllers;
 
-import com.example.springboot.services.GreetingServiceImpl;
+import com.example.springboot.services.SetterGreetingServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class PropertyInjectionControllerTest {
 
@@ -13,7 +11,7 @@ class PropertyInjectionControllerTest {
     @BeforeEach
     void setUp() {
         controller = new PropertyInjectionController();
-        controller.greetingService = new GreetingServiceImpl();
+        controller.greetingService = new SetterGreetingServiceImpl();
     }
 
     @Test

@@ -10,9 +10,9 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-public class GreetingServiceImpl implements GreetingService {
+public class SetterGreetingServiceImpl implements GreetingService {
     @Override
     public String greeting() {
-        return "Hello World";
+        return "Hello World - setter";
     }
 }

@@ -1,7 +1,9 @@
 package com.example.springboot.controllers;
 
 import com.example.springboot.services.GreetingService;
+import com.example.springboot.services.SetterGreetingServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -14,6 +16,7 @@ import org.springframework.stereotype.Controller;
 public class SetterInjectionConttroller {
 
     @Autowired
+    @Qualifier("setterGreetingServiceImpl")
     public GreetingService greetingService;
 
     public void setGreetingService(GreetingService greetingService){
