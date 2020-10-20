@@ -1,9 +1,6 @@
 package com.example.springboot;
 
-import com.example.springboot.controllers.ConstructorInjectionController;
-import com.example.springboot.controllers.MyController;
-import com.example.springboot.controllers.PropertyInjectionController;
-import com.example.springboot.controllers.SetterInjectionConttroller;
+import com.example.springboot.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -17,6 +14,8 @@ public class SpringbootApplication {
 
 		ApplicationContext context = SpringApplication.run(SpringbootApplication.class, args);
 
+		I18nController i18nController = (I18nController) context.getBean("i18nController");
+		System.out.println(i18nController.helloWorld());
 
 		System.out.println("------ Primary");
 		MyController controller = (MyController) context.getBean("myController");
