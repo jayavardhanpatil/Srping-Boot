@@ -17,10 +17,10 @@ public class SpringbootApplication {
 
 		ApplicationContext context = SpringApplication.run(SpringbootApplication.class, args);
 
-		MyController controller = (MyController) context.getBean("myController");
 
-		String greeting = controller.helloWorld();
-		System.out.println(greeting);
+		System.out.println("------ Primary");
+		MyController controller = (MyController) context.getBean("myController");
+		System.out.println(controller.helloWorld());
 
 		//DI
 		System.out.println("------ Property");
